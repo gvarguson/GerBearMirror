@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GerBearStudios.Mirror.GUI.Clock;
+using GerBearStudios.Mirror.GUI.Controllers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -49,6 +51,11 @@ namespace GerBearStudios.Mirror.GUI
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
+            var clockModel = new ClockModel();
+            clockModel.Update();
+            TimerController.RegisterModel(clockModel);
+            (Resources["clockViewModel"] as ClockViewModel).Initialize(clockModel);
+
 
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -75,7 +82,7 @@ namespace GerBearStudios.Mirror.GUI
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                rootFrame.Navigate(typeof(ClockView), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();
