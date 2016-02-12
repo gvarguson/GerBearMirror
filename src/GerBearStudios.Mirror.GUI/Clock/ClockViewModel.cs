@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,16 @@ namespace GerBearStudios.Mirror.GUI.Clock
         {
             this.model = model;
             updateTime();
+            model.PropertyChanged += ModelPropertyChanged;
+
+        }
+
+        private void ModelPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(model.CurrentTime))
+            {
+                updateTime();
+            }
         }
 
         private void updateTime()
