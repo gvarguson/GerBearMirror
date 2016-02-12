@@ -27,6 +27,23 @@ namespace GerBearStudios.Mirror.GUI.Clock
             }
         }
 
+        private string currentDate;
+        public string CurrentDate
+        {
+            get
+            {
+                return currentDate;
+            }
+            set
+            {
+                if (currentDate != value)
+                {
+                    currentDate = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         internal void Initialize(ClockModel model)
         {
             this.model = model;
@@ -46,6 +63,7 @@ namespace GerBearStudios.Mirror.GUI.Clock
         private void updateTime()
         {
             CurrentTime = model.CurrentTime.ToString("h:mm tt");
+            CurrentDate = model.CurrentTime.ToString("MMM d");
         }
 
 
