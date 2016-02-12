@@ -45,7 +45,7 @@ namespace GerBearStudios.Mirror.GUI.Clock
 
         private void updateTime()
         {
-            CurrentTime = $"It is {model.CurrentTime.ToString("hh:mm:ss tt")}.";
+            CurrentTime = model.CurrentTime.ToString("h:mm tt");
         }
 
 
