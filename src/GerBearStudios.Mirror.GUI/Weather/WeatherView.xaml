@@ -1,22 +1,18 @@
 ﻿<Page
-    x:Class="GerBearStudios.Mirror.GUI.Clock.ClockView"
+    x:Class="GerBearStudios.Mirror.GUI.Weather.WeatherView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:GerBearStudios.Mirror.GUI.Clock"
+    xmlns:local="using:GerBearStudios.Mirror.GUI.Weather"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    DataContext="{StaticResource clockViewModel}">
+    DataContext="{StaticResource WeatherViewModel}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel VerticalAlignment="Top">
             <TextBlock
-            HorizontalAlignment="Right"
-            Text="{Binding Path=CurrentDate, FallbackValue=Date will be shown here}" FontSize="48"
-            />
-            <TextBlock
-            HorizontalAlignment="Right"
-            Text="{Binding Path=CurrentTime, FallbackValue=Time will be shown here}" FontSize="24"
+            HorizontalAlignment="Left"
+            Text="{Binding Path=CurrentWeather, FallbackValue=Weather will be shown here}" FontSize="48"
             />
         </StackPanel>
     </Grid>
