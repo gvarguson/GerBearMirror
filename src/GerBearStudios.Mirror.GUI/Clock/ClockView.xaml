@@ -18,6 +18,14 @@
             HorizontalAlignment="Right"
             Text="{Binding Path=CurrentTime, FallbackValue=Time will be shown here}" FontSize="24"
             />
+<!--Need to find a way to add the weather module to this view-->
+
+<!--
+            <StackPanel Background="AntiqueWhite">
+                <Button Content="Get Weather" Click="Button_Click" />
+                <TextBlock Name="ResultTextBlock" />
+            </StackPanel>
+-->
         </StackPanel>
     </Grid>
 </Page>

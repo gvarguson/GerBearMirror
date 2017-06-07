@@ -105,13 +105,10 @@
     </Compile>
     <Compile Include="Clock\ClockViewModel.cs" />
     <Compile Include="Controllers\TimerController.cs" />
+    <Compile Include="Weather\OpenWeatherViewModel.cs" />
+    <Compile Include="Weather\OpenWeatherModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyChangedBase.cs" />
-    <Compile Include="Weather\WeatherView.xaml.cs">
-      <DependentUpon>WeatherView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Weather\WeatherModel.cs" />
-    <Compile Include="Weather\WeatherViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -135,10 +132,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Clock\ClockView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Weather\WeatherView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

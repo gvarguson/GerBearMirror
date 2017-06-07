@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:GerBearStudios.Mirror.GUI"
     xmlns:clock="using:GerBearStudios.Mirror.GUI.Clock"
+    xmlns:weather="using:GerBearStudios.Mirror.GUI.Weather"
     RequestedTheme="Light">
     <Application.Resources>
         <clock:ClockViewModel x:Key="clockViewModel"/>

@@ -56,7 +56,10 @@ namespace GerBearStudios.Mirror.GUI
             TimerController.RegisterModel(clockModel);
             (Resources["clockViewModel"] as ClockViewModel).Initialize(clockModel);
 
-
+            var openWeatherModel = new OpenWeatherModel();
+            //openWeatherModel.Update();
+            //TimerController.RegisterModel(openWeatherModel);
+            //(Resources["openWeatherModel"] as OpenWeatherViewModel).Initialize(openWeatherModel);
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
@@ -83,6 +86,7 @@ namespace GerBearStudios.Mirror.GUI
                 // configuring the new page by passing required information as a navigation
                 // parameter
                 rootFrame.Navigate(typeof(ClockView), e.Arguments);
+                // rootFrame.Navigate(typeof(OpenWeatherView), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();
