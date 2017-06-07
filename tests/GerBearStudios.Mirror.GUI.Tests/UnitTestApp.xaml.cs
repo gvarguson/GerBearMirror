@@ -1,6 +1,4 @@
-﻿using GerBearStudios.Mirror.GUI.Clock;
-using GerBearStudios.Mirror.GUI.Controllers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace GerBearStudios.Mirror.GUI
+namespace GerBearStudios.Mirror.GUI.Tests
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -30,9 +28,6 @@ namespace GerBearStudios.Mirror.GUI
         /// </summary>
         public App()
         {
-            Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
-                Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
-                Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
@@ -51,15 +46,7 @@ namespace GerBearStudios.Mirror.GUI
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-            var clockModel = new ClockModel();
-            clockModel.Update();
-            TimerController.RegisterModel(clockModel);
-            (Resources["clockViewModel"] as ClockViewModel).Initialize(clockModel);
 
-            var openWeatherModel = new OpenWeatherModel();
-            //openWeatherModel.Update();
-            //TimerController.RegisterModel(openWeatherModel);
-            //(Resources["openWeatherModel"] as OpenWeatherViewModel).Initialize(openWeatherModel);
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
@@ -79,17 +66,13 @@ namespace GerBearStudios.Mirror.GUI
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
+            
+            Microsoft.VisualStudio.TestPlatform.TestExecutor.UnitTestClient.CreateDefaultUI();
 
-            if (rootFrame.Content == null)
-            {
-                // When the navigation stack isn't restored navigate to the first page,
-                // configuring the new page by passing required information as a navigation
-                // parameter
-                rootFrame.Navigate(typeof(ClockView), e.Arguments);
-                // rootFrame.Navigate(typeof(OpenWeatherView), e.Arguments);
-            }
             // Ensure the current window is active
             Window.Current.Activate();
+
+            Microsoft.VisualStudio.TestPlatform.TestExecutor.UnitTestClient.Run(e.Arguments);
         }
 
         /// <summary>

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerBearStudios.Mirror.GUI", "src\GerBearStudios.Mirror.GUI\GerBearStudios.Mirror.GUI.csproj", "{578DB490-FBDB-4D55-9318-E7E0812C9426}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerBearStudios.Mirror.GUI.Tests", "tests\GerBearStudios.Mirror.GUI.Tests\GerBearStudios.Mirror.GUI.Tests.csproj", "{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,24 @@ Global
 		{578DB490-FBDB-4D55-9318-E7E0812C9426}.Release|x86.ActiveCfg = Release|x86
 		{578DB490-FBDB-4D55-9318-E7E0812C9426}.Release|x86.Build.0 = Release|x86
 		{578DB490-FBDB-4D55-9318-E7E0812C9426}.Release|x86.Deploy.0 = Release|x86
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Debug|ARM.ActiveCfg = Debug|ARM
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Debug|ARM.Build.0 = Debug|ARM
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Debug|ARM.Deploy.0 = Debug|ARM
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Debug|x64.ActiveCfg = Debug|x64
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Debug|x64.Build.0 = Debug|x64
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Debug|x64.Deploy.0 = Debug|x64
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Debug|x86.ActiveCfg = Debug|x86
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Debug|x86.Build.0 = Debug|x86
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Debug|x86.Deploy.0 = Debug|x86
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Release|ARM.ActiveCfg = Release|ARM
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Release|ARM.Build.0 = Release|ARM
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Release|ARM.Deploy.0 = Release|ARM
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Release|x64.ActiveCfg = Release|x64
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Release|x64.Build.0 = Release|x64
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Release|x64.Deploy.0 = Release|x64
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Release|x86.ActiveCfg = Release|x86
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Release|x86.Build.0 = Release|x86
+		{5CC75D74-2C5F-457D-B20E-7C8FB3EE6141}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

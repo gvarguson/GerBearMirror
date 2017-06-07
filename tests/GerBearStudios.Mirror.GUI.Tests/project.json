@@ -1,8 +1,5 @@
 ﻿{
   "dependencies": {
-    "Microsoft.ApplicationInsights": "2.2.0",
-    "Microsoft.ApplicationInsights.PersistenceChannel": "1.2.3",
-    "Microsoft.ApplicationInsights.WindowsApps": "1.1.1",
     "Microsoft.Net.Http": "2.2.29",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.1",
     "WeatherAPI": "1.0.1"
